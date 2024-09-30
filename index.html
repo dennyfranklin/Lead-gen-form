@@ -35,6 +35,9 @@ chat='true'>
 
             
              <button onlick="identify_call()"> Submit</button>
+
+	      <button onlick="magic_button"> Magic button</button>
+	
            
             
         </form>
@@ -102,6 +105,16 @@ chat='true'>
             fwcrm.identify(identifier, new_contact);
             console.log("ran script");
 	}
+  
+       function magic_button {
+	FM.trackCustomEvent("Added to cart", {
+	"email": "david.thompson@sample.com",
+	"price": 100.21,
+	"currency": "USD",
+	"is_mobile_transaction": true,
+	"return date": "2019-12-30"
+	}
+});
   
 </script>
 
