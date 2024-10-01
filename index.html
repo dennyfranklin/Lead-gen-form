@@ -37,7 +37,7 @@ chat='true'>
         
 
 	      <input type="submit" onclick="identify_call()"> 
-             <input type="submit" onclick="magic_btn()"> 
+              <button onclick="magic_btn(event)">Magic Button</button>
 
             
         </form>
@@ -106,8 +106,9 @@ chat='true'>
             console.log("ran script");
 	}
   
-       function magic_button {
+       function magic_button(event) {
 	FM.trackCustomEvent("Added to cart", {
+	event.preventDefault();
 	"email": "david.thompson@sample.com",
 	"price": 100.21,
 	"currency": "USD",
