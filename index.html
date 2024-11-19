@@ -30,6 +30,8 @@ chat='true'>
             <label for="company_name">Company Name:</label><br>
             <input id="company_name_2" type="text"  name="Company name" required><br><br>
 
+	<label type="hidden" for="exampleInput">Enter Text:</label>
+        <input type="hidden" id="exampleInput" name="exampleInput" value="test">
 <!--             <button type="submit">Submit</button> -->
 <!-- 		<button onclick="Activity(event)" id="btn" type="button">Click</button> -->
 
@@ -99,6 +101,7 @@ chat='true'>
                 "Email": document.getElementById("email_2").value,
                 "mobile": document.getElementById("mobile_2").value,
                 "User Agent":"testing123909",
+		"hidden_field":document.getElementById("exampleInput")
             };
             var identifier = document.getElementById("email_2").value; 
 		
