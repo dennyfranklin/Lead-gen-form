@@ -42,13 +42,29 @@ chat='true'>
             
         
 
-	      <input type="submit" value="submit"> 
+	      <input type="submit" onclick="identify_call()" value="submit"> 
 <!--               <button onclick="magic_btn(event)">Magic Button</button>
  -->
             
         </form>
         <p id="thankYouMessage" style="display: none;">Thanks for submitting the form!</p>
     </div>
+
+	<script>
+		function identify_call() = {
+			var new_contact = {
+	"First name": document.getElementById("first_name_2").value, //Replace with first name of the user
+	"Email": document.getElementById("email_2").value, //Replace with email of the user
+	"Mobile": document.getElementById("mobile_2").value, //Replace with a custom field
+	"company": {
+		"Name": document.getElementById("company_name_2").value, //Replace with company name
+		"Website": "www.example.com" //Replace with website of company
+	}
+};
+var identifier = document.getElementById("mobile_2").value;
+freshsales.identify(identifier, new_contact);
+		}
+	</script>
 
 
 <!--     <form id="form_2">
@@ -70,61 +86,6 @@ chat='true'>
 <input type="submit" onclick="identify_call()">
 
     </form> -->
- <script>
-// Define the displayDate function outside of Activity
-// function displayDate() {
-//     const now = new Date();
-//     console.log(now);
-// }
-	 
-// function Activity(event){
-//              event.preventDefault(); // Prevent default action if e is provided
-//         var button = document.getElementById("btn");
-//         if (button) {
-//             button.addEventListener("click", displayDate);
-//             console.log("checked");
-//         }	
-// 	   FM.trackCustomEvent("Added to cart", {
-// 	"email": document.getElementById("email_2").value,
-// 	"price": 100.21
-// 	   });
-//    }
-        //  document.addEventListener("DOMContentLoaded", function() {
-        // var firstNameInput = document.getElementById("first_name_2");
-        // firstNameInput.setAttribute("name", "firstname");
-		 
-        // var email = document.getElementById("email_2");
-        // email.setAttribute("name", "email");	
-		 
-       		 
-        // });
-	 
-        function identify_call() {
-            var new_contact = {
-                "First name": document.getElementById("first_name_2").value,
-                "Email": document.getElementById("email_2").value,
-                "mobile": document.getElementById("mobile_2").value,
-                "User Agent":"testing123909",
-		"hidden_field":document.getElementById("exampleInput")
-            };
-            var identifier = document.getElementById("mobile_2").value; 
-		
-            freshsales.identify(identifier, new_contact);
-            console.log("ran script");
-	}
-  
-       function magic_button(event) {
-	FM.trackCustomEvent("Added to cart", {
-	event.preventDefault();
-	"email": "david.thompson@sample.com",
-	"price": 100.21,
-	"currency": "USD",
-	"is_mobile_transaction": true,
-	"return date": "2019-12-30"
-	} }
-});
-  
-</script>
 
 	
 <!--     <script>
