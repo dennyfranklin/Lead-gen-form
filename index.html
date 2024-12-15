@@ -46,7 +46,7 @@ chat='true'>
 
             
         
-               <button type="submit" onclick="identify_call()">Submit</button>
+               <button type="submit" >Submit</button>
 <!-- 	      <input type="submit" value="submit" > 
 <!--               <button onclick="magic_btn(event)">Magic Button</button> -->
 
@@ -56,7 +56,7 @@ chat='true'>
     </div>
 
 	<script>
-		function identify_call() {
+		
 			var new_contact = {
 	"First name": document.getElementById("first_name_2").value, //Replace with first name of the user
 	"Email": document.getElementById("email_2").value, //Replace with email of the user
@@ -66,7 +66,7 @@ chat='true'>
 };
 var identifier = document.getElementById("email_2").value;
 fwcrm.identify(identifier, new_contact);
-		}
+		
 	</script>
 
 
