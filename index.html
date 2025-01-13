@@ -36,8 +36,8 @@ chat='true'>
              <input id="doc_2" type="radio" name="ride_date" value="16/12/2024" id="date-radio-2" class="deal-radio"> 
 	     <input id="doc_2" type="radio" name="ride_date" value="15/12/2024" id="date-radio-2" class="deal-radio"> 
 		
-<!--             <label for="company_name">Company Name:</label><br>
-            <input id="company_name_2" type="text"  name="Company name" required><br><br> -->
+            <label for="company_name">Company Name:</label><br>
+            <input id="company_name_2" type="text"  name="Company name" required><br><br>
 
 <!-- 	<label type="hidden" for="exampleInput">Enter Text:</label>
         <input type="hidden" id="exampleInput" name="exampleInput" value="test">
@@ -63,7 +63,9 @@ chat='true'>
 	"Email": document.getElementById("email_2").value, //Replace with email of the user
 	"Mobile": document.getElementById("mobile_2").value, //Replace with a custom field
 	"Date of Birth": document.getElementById("dob_2").value
-	
+	"company": {
+                    "Name": document.getElementById("company_name_2").value
+        }
 };
 var identifier = document.getElementById("email_2").value;
 fwcrm.identify(identifier, new_contact);
